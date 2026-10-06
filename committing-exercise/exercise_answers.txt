@@ -1,0 +1,111 @@
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop
+$ mkdir Shopping
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop
+$ cd Shopping
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping
+$ git init
+Initialized empty Git repository in C:/Users/buseu/OneDrive/Desktop/Shopping/.git/
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ touch yard.txt groceries.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        groceries.txt
+        yard.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git add .
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git commit -m "Create yard and groceries list"
+[main (root-commit) 300b6e0] Create yard and groceries list
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 groceries.txt
+ create mode 100644 yard.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git log
+commit 300b6e02039b1c11e478b579fd63aea4097d1e1c (HEAD -> main)
+Author: Buse Ulukaya <buseulukaya72@gmail.com>
+Date:   Tue Oct 6 17:15:23 2026 +0300
+
+    Create yard and groceries list
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git add groceries.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git commit -m "Add ingredients for tomato soup"
+[main 82bdcf6] Add ingredients for tomato soup
+ 1 file changed, 3 insertions(+)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git add yard.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git commit -m "Add items needed for garden box"
+[main dd107e6] Add items needed for garden box
+ 1 file changed, 2 insertions(+)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git add .
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git commit -m "Add items needed to grow potatoes"
+[main fe08693] Add items needed to grow potatoes
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git log
+commit fe08693f689d08c07d1e7c6313da5c8b35125838 (HEAD -> main)
+Author: Buse Ulukaya <buseulukaya72@gmail.com>
+Date:   Tue Oct 6 17:21:45 2026 +0300
+
+    Add items needed to grow potatoes
+
+commit dd107e668ea0894022067de5a307c28563f54b80
+Author: Buse Ulukaya <buseulukaya72@gmail.com>
+Date:   Tue Oct 6 17:19:04 2026 +0300
+
+    Add items needed for garden box
+
+commit 82bdcf6b59f20800d91724347f45ebd29f00512d
+Author: Buse Ulukaya <buseulukaya72@gmail.com>
+Date:   Tue Oct 6 17:18:15 2026 +0300
+
+    Add ingredients for tomato soup
+
+commit 300b6e02039b1c11e478b579fd63aea4097d1e1c
+Author: Buse Ulukaya <buseulukaya72@gmail.com>
+Date:   Tue Oct 6 17:15:23 2026 +0300
+
+    Create yard and groceries list
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/Shopping (main)
+$ git log --oneline
+fe08693 (HEAD -> main) Add items needed to grow potatoes
+dd107e6 Add items needed for garden box
+82bdcf6 Add ingredients for tomato soup
+300b6e0 Create yard and groceries list
+
+
