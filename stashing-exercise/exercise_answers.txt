@@ -1,0 +1,74 @@
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop
+$ mkdir stashing
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop
+$ cd stashing
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing
+$ git init
+Initialized empty Git repository in C:/Users/buseu/OneDrive/Desktop/stashing/.git/
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (main)
+$ touch diary.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (main)
+$ git add diary.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (main)
+$ git commit -m "Add diary.txt"
+[main (root-commit) 70f3737] Add diary.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 diary.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (main)
+$ git switch -c the-truth
+Switched to a new branch 'the-truth'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (the-truth)
+$ git stash
+Saved working directory and index state WIP on the-truth: 70f3737 Add diary.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (the-truth)
+$ git switch main
+Switched to branch 'main'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (main)
+$ git commit -a -m "Update diary.txt"
+[main 6a8c2fd] Update diary.txt
+ 1 file changed, 3 insertions(+)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (main)
+$ git switch the-truth
+Switched to branch 'the-truth'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (the-truth)
+$ git stash pop
+On branch the-truth
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   diary.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (cc44cdee659d730f99a99dfae3dd2aafb60af9d3)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (the-truth)
+$ git add diary.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (the-truth)
+$ git commit -m "Update diary.txt"
+[the-truth f6f041a] Update diary.txt
+ 1 file changed, 5 insertions(+)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (the-truth)
+$ git status
+On branch the-truth
+nothing to commit, working tree clean
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/stashing (the-truth)
+$
