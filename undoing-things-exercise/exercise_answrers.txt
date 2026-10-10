@@ -1,0 +1,217 @@
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop
+$ git clone https://github.com/Colt/yesterday-exercise
+Cloning into 'yesterday-exercise'...
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 24 (delta 7), reused 24 (delta 7), pack-reused 0 (from 0)
+Receiving objects: 100% (24/24), done.
+Resolving deltas: 100% (7/7), done.
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop
+$ cd yesterday-exercise
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git log
+commit f1999595607102cf26305052f642803d39d3a422 (HEAD -> master, origin/master, origin/HEAD)
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:24:23 2021 -0800
+
+    rework final verse
+
+commit 8e3111cc0bcbb1eb3365a69690d747fdcfc68653
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:23:29 2021 -0800
+
+    rework chorus
+
+commit b88b2541a9b9480675250a019ab8b7005a237f5f
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:58 2021 -0800
+
+    rework second verse
+
+commit b5934442de209c5a579c8bee383b611ecd7f2312
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:46 2021 -0800
+
+    rework first verse
+
+commit cdd927c0bebbef64adf38f8cb58a186d33aaeeab
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:17 2021 -0800
+
+    finish original lyrics
+
+commit 9518e200d1aed15ddd7654d151feb5132ca17632
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:55 2021 -0800
+
+    add original chorus
+
+commit 9858f43403a7c6c5e92380a21a794faa6af87aff
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:34 2021 -0800
+
+    add original second verse
+
+commit 485a33962fc19a957cabb54273e99465fdba9c9d
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:21 2021 -0800
+
+    add original first verse
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git checkout 485a33962fc19a957cabb54273e99465fdba9c9d
+Note: switching to '485a33962fc19a957cabb54273e99465fdba9c9d'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 485a339 add original first verse
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise ((485a339...))
+$ git checkout cdd927c0bebbef64adf38f8cb58a186d33aaeeab
+Previous HEAD position was 485a339 add original first verse
+HEAD is now at cdd927c finish original lyrics
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise ((cdd927c...))
+$ git branch scrambled-eggs
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise ((cdd927c...))
+$ git switch scrambled-eggs
+Switched to branch 'scrambled-eggs'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (scrambled-eggs)
+$ git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git restore lyrics.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ cat lyrics.txt
+Yesterday
+All my troubles seemed so far away
+Now it looks as though they're here to stay
+Oh, I believe in yesterday
+
+Suddenly
+I'm not half the man I used to be
+There's a shadow hanging over me
+Oh, yesterday came suddenly
+
+Why she had to go
+I don't know, she wouldn't say
+I said something wrong
+Now I long for yesterday
+
+Yesterday
+Love was such an easy game to play
+Now I need a place to hide away
+Oh, I believe in yesterday
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git add lyrics.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git commit -m "Update lyrics.txt"
+[master 1c43145] Update lyrics.txt
+ 1 file changed, 7 insertions(+), 17 deletions(-)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git add lyrics.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git commit -m "Update lyrics.txt"
+[master 31f5a1c] Update lyrics.txt
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git reset HEAD~2
+Unstaged changes after reset:
+M       lyrics.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git switch -c 404
+Switched to a new branch '404'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (404)
+$ git add lyrics.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (404)
+$ git commit -m "Add 404 parody lyrics"
+[404 fa068a5] Add 404 parody lyrics
+ 1 file changed, 15 insertions(+), 16 deletions(-)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (404)
+$ git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ cat lyrics.txt
+Yesterday
+All my troubles seemed so far away
+Now it looks as though they're here to stay
+Oh, I believe in yesterday
+
+Suddenly
+I'm not half the man I used to be
+There's a shadow hanging over me
+Oh, yesterday came suddenly
+
+Why she had to go
+I don't know, she wouldn't say
+I said something wrong
+Now I long for yesterday
+
+Yesterday
+Love was such an easy game to play
+Now I need a place to hide away
+Oh, I believe in yesterday
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (master)
+$ git switch 404
+Switched to branch '404'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (404)
+$ cat lyrics.txt
+404
+Guess this ain't the page you're looking for
+On this website there are thousands more
+With no error 404
+
+Suddenly
+This is not the page you thought you'd see
+But it's not an error 403
+Yes, 404s come easily
+Why it has to show, I don't know
+Or what it's for
+You typed something wrong?
+Here's no song - it's 404
+
+404
+Adding 1% to twenty score
+(I put that line in 'cause it scans, no more)
+"Goodbye" from error 404
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/yesterday-exercise (404)
+$
