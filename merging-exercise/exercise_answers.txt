@@ -1,0 +1,126 @@
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git switch -c greeting
+Switched to a new branch 'greeting'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (greeting)
+$ git switch main
+Switched to branch 'main'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git switch greeting
+Switched to branch 'greeting'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (greeting)
+$ touch thank_you_in_languages.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (greeting)
+$ git add .
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (greeting)
+$ git commit -m "Add thanks"
+[greeting 5dca7b3] Add thanks
+ 1 file changed, 52 insertions(+)
+ create mode 100644 thank_you_in_languages.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (greeting)
+$ git switch main
+Switched to branch 'main'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git merge greeting
+Updating 8615563..5dca7b3
+Fast-forward
+ thank_you_in_languages.txt | 52 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 52 insertions(+)
+ create mode 100644 thank_you_in_languages.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git log --oneline --graph --all
+* 5dca7b3 (HEAD -> main, greeting) Add thanks
+* 8615563 update greetings.txt
+* 7ee2060 add greetings.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git log
+commit 5dca7b34c54315666f476b22315cd940890415c5 (HEAD -> main, greeting)
+Author: Buse Ulukaya <buseulukaya72@gmail.com>
+Date:   Sat Oct 10 12:02:09 2026 +0300
+
+    Add thanks
+
+commit 8615563be7a1ec7b157fb90eade81de708fcc7fd
+Author: Buse Ulukaya <buseulukaya72@gmail.com>
+Date:   Sat Oct 10 11:43:28 2026 +0300
+
+    update greetings.txt
+
+commit 7ee20600a20960fcfcf318a84925d0084df9a9d5
+Author: Buse Ulukaya <buseulukaya72@gmail.com>
+Date:   Sat Oct 10 11:38:37 2026 +0300
+
+    add greetings.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git add .
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git commit -m "Set initial Turkish greeting"
+[main ddd29a9] Set initial Turkish greeting
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git switch -c greeting-conflict
+Switched to a new branch 'greeting-conflict'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (greeting-conflict)
+$ git add greetings.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (greeting-conflict)
+$ git commit -m "Change Turkish greeting to Selam"
+[greeting-conflict 8111df3] Change Turkish greeting to Selam
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (greeting-conflict)
+$ git switch main
+Switched to branch 'main'
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git add greetings.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git commit -m "Change Turkish greeting to Merhabalarr"
+[main 1444740] Change Turkish greeting to Merhabalarr
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git merge greeting-conflict
+Auto-merging greetings.txt
+CONFLICT (content): Merge conflict in greetings.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main|MERGING)
+$ git add greetings.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main|MERGING)
+$ git commit -m "Resolve Turkish greeting conflict"
+[main 8b946f2] Resolve Turkish greeting conflict
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$ git log --oneline --graph --all
+*   8b946f2 (HEAD -> main) Resolve Turkish greeting conflict
+|\
+| * 8111df3 (greeting-conflict) Change Turkish greeting to Selam
+* | 1444740 Change Turkish greeting to Merhabalarr
+|/
+* ddd29a9 Set initial Turkish greeting
+* 5dca7b3 (greeting) Add thanks
+* 8615563 update greetings.txt
+* 7ee2060 add greetings.txt
+
+buseu@LAPTOP-VPI2HF9T MINGW64 ~/OneDrive/Desktop/greetings (main)
+$
